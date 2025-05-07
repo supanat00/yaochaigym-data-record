@@ -33,7 +33,7 @@ const LOGIN_PATH = '/login';
 
 // --- Path เริ่มต้นหลังจาก Login สำเร็จ ---
 // User ที่ Login แล้ว จะถูกส่งไปที่นี่ถ้าพยายามเข้าหน้า Login อีกครั้ง
-const DASHBOARD_PATH = '/';
+const HOME_PATH = '/';
 
 // --- Middleware Function ---
 export async function middleware(request: NextRequest) {
@@ -86,9 +86,9 @@ export async function middleware(request: NextRequest) {
 
         // กรณีที่ 2: Login แล้ว (isLoggedIn = true) และกำลังพยายามเข้าถึงหน้า Login (LOGIN_PATH)
         if (isLoggedIn && pathname === LOGIN_PATH) {
-            console.log(`   Action: Redirecting to DASHBOARD_PATH (${DASHBOARD_PATH}) because user is already logged in and accessing the login page.`);
+            console.log(`   Action: Redirecting to HOME_PATH (${HOME_PATH}) because user is already logged in and accessing the login page.`);
             // สร้าง URL สำหรับ Redirect ไปหน้า Dashboard
-            return NextResponse.redirect(new URL(DASHBOARD_PATH, request.url));
+            return NextResponse.redirect(new URL(HOME_PATH, request.url));
         }
 
         // กรณีอื่นๆ: (Login แล้วเข้าหน้าที่ได้รับอนุญาต หรือ ยังไม่ Login แต่เข้า Public Path)
