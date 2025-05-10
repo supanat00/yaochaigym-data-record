@@ -22,6 +22,7 @@ const sessionOptions = {
 // **สำคัญ:** ตรวจสอบรายการนี้ให้ดี Path ที่ต้องการป้องกันต้องไม่อยู่ในนี้
 const PUBLIC_PATHS = [
     '/login',           // หน้า Login (เผื่อมี Path แยก แต่ในกรณีนี้ซ้ำกับ '/')
+    '/manifest.webmanifest'
     // '/register',     // ตัวอย่าง: หน้าสมัครสมาชิก (ถ้ามี)
     // '/about',        // ตัวอย่าง: หน้าเกี่ยวกับเรา
     // '/api/public-data' // ตัวอย่าง: API ที่ไม่ต้อง Login
@@ -117,7 +118,7 @@ export const config = {
          * Pattern นี้ค่อนข้างครอบคลุมทั่วไป:
          */
         '/((?!api/|_next/static|_next/image|favicon.ico|images/).*)',
-
+        '/((?!api/|_next/static|_next/image|favicon.ico|icons/).*)',
         /*
          * หรือถ้าต้องการให้ Match ทุกอย่างจริงๆ (รวมถึง API) แล้วไปกรองใน Logic ก็ใช้แบบนี้:
          * '/:path*'
