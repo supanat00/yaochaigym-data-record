@@ -164,10 +164,10 @@ export default function SessionCustomerTable({ customers, onDataUpdate }: Sessio
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-100">
                         <tr>
-                            <th scope="col" className="px-4 py-3 text-left text-md font-semibold text-gray-600 uppercase tracking-wider">ชื่อลูกค้า</th>
-                            <th scope="col" className="px-4 py-3 text-center text-md font-semibold text-gray-600 uppercase tracking-wider">วันที่เริ่ม</th>
-                            <th scope="col" className="px-4 py-3 text-center text-md font-semibold text-gray-600 uppercase tracking-wider">วันที่หมด</th>
-                            <th scope="col" className="px-4 py-3 text-center text-md font-semibold text-gray-600 uppercase tracking-wider">จำนวนคงเหลือ</th>
+                            <th scope="col" className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ชื่อลูกค้า</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">วันที่เริ่ม</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">วันที่หมด</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">จำนวนคงเหลือ</th>
                             <th scope="col" className="relative px-4 py-3 text-right">
                                 <span className="sr-only">ดูรายละเอียด</span>
                             </th>
@@ -179,17 +179,17 @@ export default function SessionCustomerTable({ customers, onDataUpdate }: Sessio
                         )}
                         {processedCustomers.map((customer) => (
                             <tr key={customer.rowNumber} className="hover:bg-gray-50 transition-colors duration-150">
-                                <td className="px-4 py-3 whitespace-nowrap text-md font-medium text-gray-900">{customer.FullName}</td>
-                                <td className="px-4 py-3 whitespace-nowrap text-md text-center text-gray-500">
+                                <td className="px-4 py-3 whitespace-nowrap text-xs font-medium text-gray-900">{customer.FullName}</td>
+                                <td className="px-4 py-3 whitespace-nowrap text-xs text-center text-gray-500">
                                     {customer.FormattedStartDate}
                                 </td>
-                                <td className="px-4 py-3 whitespace-nowrap text-md text-center text-gray-500">
+                                <td className="px-4 py-3 whitespace-nowrap text-xs text-center text-gray-500">
                                     {customer.FinalEndDate}
                                 </td>
-                                <td className={`px-4 py-3 whitespace-nowrap text-md text-center font-semibold ${customer.StatusColorClass}`}>
+                                <td className={`px-4 py-3 whitespace-nowrap text-xs text-center font-semibold ${customer.StatusColorClass}`}>
                                     {customer.RemainingSessionsDisplay}
                                 </td>
-                                <td className="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                <td className="px-4 py-3 whitespace-nowrap text-right text-xs font-medium">
                                     <button
                                         onClick={() => openModal(customer)}
                                         title="ดู/จัดการรายละเอียด"

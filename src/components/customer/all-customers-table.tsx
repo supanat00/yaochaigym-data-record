@@ -63,15 +63,15 @@ export default function AllCustomersTable({ customers, onDataUpdate }: AllCustom
 
     return (
         <>
-            <div className="overflow-x-auto shadow-md sm:rounded-lg border border-gray-200">
+            <div className="overflow-hidden shadow-md sm:rounded-lg border border-gray-200">
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-100">
                         <tr>{/* Ensure no extra space */}
-                            <th scope="col" className="px-4 py-3 text-left text-md font-semibold text-gray-600 uppercase tracking-wider">ชื่อลูกค้า</th>
-                            <th scope="col" className="px-4 py-3 text-center text-md font-semibold text-gray-600 uppercase tracking-wider">ประเภทคอร์ส</th>
+                            <th scope="col" className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ชื่อลูกค้า</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">ประเภทคอร์ส</th>
                             {/* ***** NEW COLUMN HEADER: วันที่หมดอายุ ***** */}
-                            <th scope="col" className="px-4 py-3 text-center text-md font-semibold text-gray-600 uppercase tracking-wider">วันที่หมด</th>
-                            <th scope="col" className="px-4 py-3 text-center text-md font-semibold text-gray-600 uppercase tracking-wider">จำนวนคงเหลือ</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">วันที่หมด</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">จำนวนคงเหลือ</th>
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
@@ -108,8 +108,8 @@ export default function AllCustomersTable({ customers, onDataUpdate }: AllCustom
 
                             return (
                                 <tr key={customer.rowNumber} className="hover:bg-gray-50 transition-colors duration-150">
-                                    <td className="px-4 py-3 whitespace-nowrap text-md font-medium text-gray-900">{customer.FullName}</td>
-                                    <td className="px-4 py-3 whitespace-nowrap text-md text-center">
+                                    <td className="px-4 py-3 whitespace-nowrap text-xs font-medium text-gray-900">{customer.FullName}</td>
+                                    <td className="px-4 py-3 whitespace-nowrap text-xs text-center">
                                         <span className={`px-2 py-0.5 inline-flex text-md leading-5 font-semibold rounded-full ${customer.CourseType === 'รายเดือน' ? 'bg-indigo-100 text-indigo-800' :
                                             customer.CourseType === 'รายครั้ง' ? 'bg-teal-100 text-teal-800' : 'bg-gray-100 text-gray-800'
                                             }`}>
@@ -117,10 +117,10 @@ export default function AllCustomersTable({ customers, onDataUpdate }: AllCustom
                                         </span>
                                     </td>
                                     {/* ***** NEW COLUMN CELL: วันที่หมดอายุ ***** */}
-                                    <td className="px-4 py-3 whitespace-nowrap text-md text-gray-500 text-center">
+                                    <td className="px-4 py-3 whitespace-nowrap text-xs text-gray-500 text-center">
                                         {customer.FinalEndDate || '-'}
                                     </td>
-                                    <td className={`px-4 py-3 whitespace-nowrap text-md text-center font-semibold ${customer.StatusColorClass}`}>
+                                    <td className={`px-4 py-3 whitespace-nowrap text-xs text-center font-semibold ${customer.StatusColorClass}`}>
                                         {displayValueForRemainingColumn}{unit}
                                     </td>
                                 </tr>

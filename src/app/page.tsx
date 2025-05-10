@@ -39,7 +39,7 @@ export default async function Home() {
   // --- 4. Render หน้า UI ---
   return (
     // ใช้ Layout หลักของหน้า
-    <main className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8">
+    <main className="min-h-screen bg-gray-100 p-4 overflow-hidden">
       {/* Container จำกัดความกว้าง */}
       <div className="max-w-screen-xl mx-auto"> {/* หรือขนาดอื่นที่ต้องการ เช่น max-w-7xl */}
         {/* Header ของหน้า */}
