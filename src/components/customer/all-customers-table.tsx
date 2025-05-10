@@ -67,11 +67,11 @@ export default function AllCustomersTable({ customers, onDataUpdate }: AllCustom
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-100">
                         <tr>{/* Ensure no extra space */}
-                            <th scope="col" className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ชื่อลูกค้า</th>
-                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">ประเภทคอร์ส</th>
+                            <th scope="col" className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ชื่อ</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">คอร์ส</th>
                             {/* ***** NEW COLUMN HEADER: วันที่หมดอายุ ***** */}
                             <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">วันที่หมด</th>
-                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">จำนวนคงเหลือ</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">คงเหลือ</th>
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">

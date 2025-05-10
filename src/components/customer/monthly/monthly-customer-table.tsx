@@ -133,10 +133,10 @@ export default function MonthlyCustomerTable({ customers, onDataUpdate }: Monthl
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-100">
                         <tr>
-                            <th scope="col" className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ชื่อลูกค้า</th>
+                            <th scope="col" className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ชื่อ</th>
                             <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">วันที่เริ่ม</th>
                             <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">วันที่หมด</th>
-                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">เวลาคงเหลือ</th>
+                            <th scope="col" className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">คงเหลือ</th>
                             <th scope="col" className="relative px-4 py-3 text-right">
                                 <span className="sr-only">ดูรายละเอียด</span>
                             </th>
