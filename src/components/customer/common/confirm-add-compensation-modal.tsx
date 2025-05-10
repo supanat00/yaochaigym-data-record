@@ -72,7 +72,7 @@ export default function ConfirmAddCompensationModal({
 
     if (mode === 'all-monthly') {
         modalTitle = "เพิ่มวัน (รายเดือนทุกคน)";
-        modalDescription = `คุณกำลังจะเพิ่มวันชดเชยให้กับลูกค้า <strong class="text-indigo-600">รายเดือน</strong> <strong class="text-red-600">ทุกคน</strong> ที่คอร์สยังไม่หมดอายุ (อิงจาก Original End Date). วันที่เพิ่มจะถูกบวกเข้ากับ Manual End Date (หรือ Original End Date หากไม่มี).`;
+        modalDescription = `คุณกำลังจะเพิ่มวันชดเชยให้กับลูกค้า <strong class="text-red-600">ทุกคน</strong> ที่คอร์สยังไม่หมดอายุ (อิงจาก Original End Date). วันที่เพิ่มจะถูกบวกเข้ากับ Manual End Date (หรือ Original End Date หากไม่มี).`;
         // icon and colors remain yellow for general warning
     } else if (mode === 'selected-customers') {
         modalTitle = `เพิ่มวัน (${targetCustomerIds.length} คนที่เลือก)`;
